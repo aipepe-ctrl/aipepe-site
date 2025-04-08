@@ -1,103 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>$AIPEPE - The Smartest Meme Coin</title>
-  <style>
-    body {
-      background-color: #0d0d0d;
-      color: #00ff99;
-      font-family: 'Courier New', Courier, monospace;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background: #1a1a1a;
-      padding: 30px 0;
-    }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 0;
-    }
-    .section {
-      padding: 40px 20px;
-      border-bottom: 1px solid #222;
-    }
-    .title {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #33ffcc;
-    }
-    a {
-      color: #00ffcc;
-      text-decoration: none;
-    }
-    .social a {
-      margin: 0 10px;
-      display: inline-block;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>$AIPEPE</h1>
-    <p>The Smartest Meme Frog on the Blockchain</p>
-  </header>
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
-  <div class="section">
-    <div class="title">The Lore of $AIPEPE</div>
-    <p>One day, Pepe touched a GPU. Then he trained on every meme ever posted on the internet.</p>
-    <p>Now he's smarter than your trading bot. And he's coming for the charts.</p>
-    <p>Meet $AIPEPE — the first meme coin that thinks.</p>
-    <p>Born on Solana, built for speed — 0% tax, 100% meme.</p>
-    <p>Anti-whale. Anti-bot. Liquidity locked. Contract sent to the moon.</p>
-    <p>He doesn’t just ribbit. He calculates.</p>
-  </div>
+import Swap from "./pages/Swap";
+import Community from "./pages/Community";
 
-  <div class="section">
-    <div class="title">Tokenomics</div>
-    <p>Total Supply: 1,000,000,000 $AIPEPE</p>
-    <p>Liquidity: 80% (locked forever)</p>
-    <p>Community Airdrop: 15%</p>
-    <p>Development & Marketing: 5%</p>
-    <p>No Presale. No Team Tokens. No BS.</p>
-  </div>
+function Home() {
+  return (
+    <section className="flex flex-col items-center justify-center text-center py-24 px-4 animate-fade-in">
+      <img
+        src="/assets/aipepe-logo.png"
+        alt="$AIPEPE Logo"
+        className="w-48 h-48 mb-6 rounded-full shadow-lg border border-cyan-500"
+      />
+      <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-cyan-400">
+        The Rise of $AIPEPE
+      </h2>
+      <p className="max-w-xl text-gray-300 text-lg mb-6">
+        From a dumb meme frog to the smartest AI in Web3. $AIPEPE is the future of decentralized intelligence and meme-fueled utility.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Link
+          to="/swap"
+          className="bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-2 px-6 rounded-full transition"
+        >
+          Join Swap
+        </Link>
+        <Link
+          to="/lore"
+          className="border border-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-full transition"
+        >
+          Read The Lore
+        </Link>
+      </div>
+    </section>
+  );
+}
 
-  <div class="section">
-    <div class="title">Roadmap</div>
-    <p><strong>Phase 1:</strong> Launch on Solana, Community building, Website live</p>
-    <p><strong>Phase 2:</strong> DEX listing, First memes go viral, Trending on X</p>
-    <p><strong>Phase 3:</strong> NFT drop, Partnerships, AI-powered meme bot</p>
-    <p><strong>Phase 4:</strong> $AIPEPE in every wallet. Rule the meme economy.</p>
-  </div>
+function Lore() {
+  return (
+    <section className="max-w-3xl mx-auto py-16 px-6">
+      <h2 className="text-3xl font-bold text-cyan-400 mb-6">The Lore of $AIPEPE</h2>
+      <p className="text-gray-300 mb-4">
+        Once upon a blockchain, a clueless meme frog stumbled into an AI lab and accidentally uploaded its consciousness into a decentralized quantum computer.
+        The result? A hyper-intelligent, meme-powered being known as <strong className="text-white">$AIPEPE</strong>.
+      </p>
+      <p className="text-gray-300 mb-4">
+        Now with more IQ than Vitalik and more meme-power than Doge, $AIPEPE roams the metaverse to disrupt Web3 with smart contracts, dumb humor, and insane utility.
+      </p>
+      <p className="text-gray-300">
+        Join the cult. Worship the frog. Feed the chain.
+      </p>
+    </section>
+  );
+}
 
-  <div class="section">
-    <div class="title">Join the Swamp</div>
-    <div class="social">
-      <a href="https://t.me/aipepeportal" target="_blank">Telegram</a>
-      <a href="https://x.com/aipepe" target="_blank">X (Twitter)</a>
-      <a href="https://discord.gg/aipepe" target="_blank">Discord</a>
-    </div>
-  </div>
+function Tokenomics() {
+  return (
+    <section className="max-w-4xl mx-auto py-16 px-6">
+      <h2 className="text-3xl font-bold text-cyan-400 mb-6">$AIPEPE Tokenomics</h2>
+      <div className="bg-gray-800 rounded-xl p-6 shadow-lg">
+        <ul className="space-y-4 text-gray-300 text-lg">
+          <li><strong className="text-cyan-400">Total Supply:</strong> 1,000,000,000 AIPEPE</li>
+          <li><strong className="text-cyan-400">Liquidity Pool:</strong> 50%</li>
+          <li><strong className="text-cyan-400">Community Airdrop:</strong> 20%</li>
+          <li><strong className="text-cyan-400">Marketing & Partnerships:</strong> 15%</li>
+          <li><strong className="text-cyan-400">Team (Vested):</strong> 10%</li>
+          <li><strong className="text-cyan-400">CEX Listing Reserve:</strong> 5%</li>
+        </ul>
+      </div>
+    </section>
+  );
+}
 
-  <footer class="section">
-    <p>&copy; 2025 $AIPEPE. He’s watching the charts.</p>
- </footer>
-  <div class="section">
-  <div class="title">Join the Swamp</div>
-  <p>Buy $AIPEPE now and become part of the revolution!</p>
-  <a href="https://raydium.io/swap/" target="_blank" style="background: #00ff99; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 10px;">Buy on Raydium</a>
-</div>
+function Roadmap() {
+  return (
+    <section className="max-w-4xl mx-auto py-16 px-6">
+      <h2 className="text-3xl font-bold text-cyan-400 mb-6">$AIPEPE Roadmap</h2>
+      <ol className="space-y-6 border-l-4 border-cyan-500 pl-6">
+        <li>
+          <h3 className="text-xl font-bold text-white">Phase 1: Birth of Intelligence</h3>
+          <p className="text-gray-300">Launch of token, creation of lore, logo design, and initial community building.</p>
+        </li>
+        <li>
+          <h3 className="text-xl font-bold text-white">Phase 2: Meme Takeover</h3>
+          <p className="text-gray-300">Meme campaigns, AI-generated content, partnerships with influencers, and first CEX listing.</p>
+        </li>
+        <li>
+          <h3 className="text-xl font-bold text-white">Phase 3: Brain Expansion</h3>
+          <p className="text-gray-300">AI utility integration, smart dApps powered by $AIPEPE, DAO voting.</p>
+        </li>
+        <li>
+          <h3 className="text-xl font-bold text-white">Phase 4: Frog Supremacy</h3>
+          <p className="text-gray-300">Mass adoption push, NFT marketplace, multichain expansion, and global domination (obviously).</p>
+        </li>
+      </ol>
+    </section>
+  );
+}
 
-<div class="section">
-  <div class="title">Follow Us</div>
-  <p>
-    <a href="https://twitter.com/aipepecoin" target="_blank">Twitter</a> |
-    <a href="https://t.me/aipepecoin" target="_blank">Telegram</a> |
-    <a href="https://dexscreener.com/solana/..." target="_blank">DexScreener</a>
-  </p>
-</div>
-</body>
-</html>
+function JoinSwap() {
+  return (
+    <section className="max-w-3xl mx-auto py-16 px-6 text-center">
+      <h2 className="text-3xl font-bold text-cyan-400 mb-6">Join the $AIPEPE Swap</h2>
+      <p className="text-lg text-gray-300 mb-4">
+        Swap your favorite tokens for $AIPEPE on our preferred DEX. Become part of the smartest frog cult in crypto.
+      </p>
+      <a
+        href="https://app.uniswap.org/#/swap?outputCurrency=0x0000000000000000000000000000000000000000"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-3 px-8 rounded-full transition"
+      >
+        Swap on Uniswap
+      </a>
+      <p className="text-sm text-gray-500 mt-4">
+        Contract Address: <span className="text-gray-300">0x000...AIPEPE</span>
+      </p>
+    </section>
+  );
+}
+
+function Community() {
+  return (
+    <section className="max-w-3xl mx-auto py-16 px-6 text-center">
+      <h2 className="text-3xl font-bold text-cyan-400 mb-6">Join the AIPEPE Community</h2>
+      <p className="text-lg text-gray-300 mb-6">
+        Follow us, meme with us, build with us. Be part of the frog uprising.
+      </p>
+      <div className="flex flex-wrap justify-center gap-6">
+        <a href="https://t.me/aipepeportal" target="_blank" rel="noopener noreferrer" className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-6 py-3 rounded-full">
+          Telegram
+        </a>
+        <a href="https://twitter.com/aipepe" target="_blank" rel="noopener noreferrer" className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-6 py-3 rounded-full">
+          Twitter (X)
+        </a>
+        <a href="https://discord.gg/aipepe" target="_blank" rel="noopener noreferrer" className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-6 py-3 rounded-full">
+          Discord
+        </a>
+      </div>
+    </section>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="bg-gradient-to-br from-black via-gray-900 to-cyan-900 text-white min-h-screen font-sans">
+        <header className="p-4 flex justify-between items-center border-b border-cyan-500">
+          <h1 className="text-2xl font-extrabold text-cyan-400">$AIPEPE</h1>
+          <nav className="space-x-4 text-sm">
+            <Link to="/" className="hover:text-cyan-300 transition">Home</Link>
+            <Link to="/lore" className="hover:text-cyan-300 transition">Lore</Link>
+            <Link to="/tokenomics" className="hover:text-cyan-300 transition">Tokenomics</Link>
+            <Link to="/roadmap" className="hover:text-cyan-300 transition">Roadmap</Link>
+            <Link to="/swap" className="hover:text-cyan-300 transition">Join Swap</Link>
+            <Link to="/community" className="hover:text-cyan-300 transition">Community</Link>
+          </nav>
+        </header>
+
+        <main className="p-6">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/lore" element={<Lore />} />
+            <Route path="/tokenomics" element={<Tokenomics />} />
+            <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/swap" element={<JoinSwap />} />
+            <Route path="/community" element={<Community />} />
+          </Routes>
+        </main>
+
+        <footer className="text-center text-sm text-gray-400 p-4 border-t border-gray-700">
+          © {new Date().getFullYear()} AIPEPE. All rights reserved.
+        </footer>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
