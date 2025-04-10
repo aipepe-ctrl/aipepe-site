@@ -7,114 +7,110 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0c0f18;
-      color: #00ffd1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      padding: 0;
+      background-color: #0d1117;
+      font-family: 'Arial', sans-serif;
+      color: #ffffff;
+      text-align: center;
     }
+
     .container {
-      max-width: 800px;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
+      max-width: 700px;
+      margin: auto;
+      padding: 30px 20px;
     }
-    .left {
-      flex: 1;
+
+    img.logo {
+      width: 200px;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
-    .left img {
-      width: 100%;
-      max-width: 300px;
-    }
-    .right {
-      flex: 1;
-    }
-    .title {
+
+    h1 {
+      color: #00ff9f;
       font-size: 36px;
-      font-weight: bold;
-      color: #00ffae;
+      margin: 0;
     }
-    .subtitle {
+
+    h2 {
+      color: #00ffe1;
       font-size: 18px;
-      margin: 10px 0 20px;
-      color: #00ffd1;
+      margin: 10px 0 30px;
     }
+
     .button {
-      background-color: #00ffd1;
+      background-color: #00ffe1;
       color: #000;
-      padding: 10px 20px;
       border: none;
       border-radius: 10px;
+      padding: 12px 24px;
+      font-weight: bold;
       font-size: 16px;
       cursor: pointer;
+      margin-bottom: 30px;
     }
-    .info-section {
+
+    .grid {
       display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 40px;
+      justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
+
     .box {
-      flex: 1;
-      border: 1px solid #00ffd1;
+      border: 1px solid #00ffe1;
       border-radius: 10px;
       padding: 20px;
+      width: 250px;
+      text-align: left;
     }
+
     .box h3 {
+      color: #00ffe1;
       margin-top: 0;
-      color: #00ffd1;
     }
+
     .socials {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
+      gap: 25px;
+      margin-top: 20px;
     }
+
     .socials img {
-      width: 30px;
-      height: 30px;
-      filter: brightness(0) saturate(100%) invert(71%) sepia(71%) saturate(7493%) hue-rotate(113deg) brightness(105%) contrast(97%);
+      width: 28px;
+      height: 28px;
+      filter: brightness(0) saturate(100%) invert(53%) sepia(87%) saturate(447%) hue-rotate(118deg) brightness(103%) contrast(101%);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="left">
-      <img src="https://i.imgur.com/2lF7p8u.png" alt="AIPEPE" />
-    </div>
-    <div class="right">
-      <div class="title">AIPEPE</div>
-      <div class="subtitle">THE SMARTEST MEME COIN HAS ARRIVED</div>
-      <button class="button">Join Swap</button>
-    </div>
-  </div>
+    <img src="cyberfrog.png" alt="AIPEPE" class="logo" />
+    <h1>AIPEPE</h1>
+    <h2>THE SMARTEST MEME COIN HAS ARRIVED</h2>
+    <button class="button">Join Swap</button>
 
-  <div class="info-section">
-    <div class="box">
-      <h3>Tokenomics</h3>
-      <p>Supply: 1,000,000,000</p>
-      <p>Tax: 0%</p>
+    <div class="grid">
+      <div class="box">
+        <h3>Tokenomics</h3>
+        <p>Supply: 1,000,000,000</p>
+        <p>Tax: 0%</p>
+      </div>
+      <div class="box">
+        <h3>Roadmap</h3>
+        <p>Phase 1: Launch</p>
+        <p>Phase 2: Growth</p>
+        <p>Phase 3: Utility</p>
+      </div>
     </div>
-    <div class="box">
-      <h3>Roadmap</h3>
-      <p>Phase 1: Launch</p>
-      <p>Phase 2: Growth</p>
-      <p>Phase 3: Utility</p>
-    </div>
-  </div>
 
-  <div class="socials">
-    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
-    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" /></a>
-    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord" /></a>
+    <div class="socials">
+      <a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
+      <a href="#"><img src="telegram-icon.png" alt="Telegram" /></a>
+      <a href="#"><img src="discord-icon.png" alt="Discord" /></a>
+    </div>
   </div>
 </body>
 </html>
