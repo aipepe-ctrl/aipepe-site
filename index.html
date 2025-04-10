@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIPEPE Meme Coin</title>
     <style>
         body {
-            background-color: #0A1A2F; /* رنگ پس‌زمینه تیره */
-            color: #FFFFFF; /* رنگ متن سفید */
+            background: linear-gradient(180deg, #0A1A2F 0%, #1E2A44 100%); /* گرادیان پس‌زمینه مطابق تصویر */
+            color: #FFFFFF;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -15,14 +15,14 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            direction: ltr; /* جهت متن به صورت چپ به راست */
+            overflow: hidden;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 600px; /* عرض کلی */
+            width: 600px;
         }
 
         .top-section {
@@ -30,13 +30,14 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
+            margin-bottom: 20px;
         }
 
         .image-placeholder {
             width: 200px;
             height: 200px;
-            background-color: #1E2A44; /* رنگ جای‌نگه‌دار تصویر */
-            border: 2px solid #00FFFF; /* حاشیه فیروزه‌ای */
+            background-color: #1E2A44;
+            border: 2px solid #00FFFF;
             border-radius: 10px;
         }
 
@@ -47,26 +48,31 @@
 
         .title {
             font-size: 48px;
-            color: #00FFFF; /* رنگ فیروزه‌ای */
+            color: #00FFFF;
             font-weight: bold;
             margin: 0;
+            text-shadow: 0 0 10px #00FFFF; /* سایه فیروزه‌ای برای ظرافت */
         }
 
         .subtitle {
             font-size: 24px;
             color: #00FFFF;
             margin: 10px 0;
+            line-height: 1.2;
+            text-shadow: 0 0 5px #00FFFF;
         }
 
         .button {
             background-color: #00FFFF;
             color: #0A1A2F;
-            padding: 10px 20px;
+            padding: 10px 30px;
             border: none;
             border-radius: 20px;
             font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
             margin-top: 10px;
+            box-shadow: 0 0 10px #00FFFF; /* سایه برای دکمه */
         }
 
         .button:hover {
@@ -77,21 +83,22 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            margin-top: 20px;
         }
 
         .box {
-            background-color: #1E2A44;
+            background-color: rgba(30, 42, 68, 0.8); /* شفافیت برای جعبه‌ها */
             border: 2px solid #00FFFF;
             border-radius: 10px;
             padding: 15px;
             width: 45%;
+            box-shadow: 0 0 10px #00FFFF; /* سایه برای جعبه‌ها */
         }
 
         .box h3 {
             font-size: 24px;
             color: #00FFFF;
             margin: 0 0 10px 0;
+            text-shadow: 0 0 5px #00FFFF;
         }
 
         .box p {
@@ -136,10 +143,5 @@
             </div>
         </div>
         <div class="social-icons">
-            <img src="twitter-icon.png" alt="Twitter"> <!-- جای آیکون توییتر -->
-            <img src="telegram-icon.png" alt="Telegram"> <!-- جای آیکون تلگرام -->
-            <img src="discord-icon.png" alt="Discord"> <!-- جای آیکون دیسکورد -->
-        </div>
-    </div>
-</body>
-</html>
+            <!-- آیکون توییتر -->
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAADLElEQVR4nO2WT2hTQRTHf3d3d3d3d3d3d3d3
