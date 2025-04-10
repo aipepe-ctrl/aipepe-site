@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
+    background-color: #6a5acd; /* بنفش تیره */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -80,7 +80,11 @@ body {
     padding: 20px;
     border: 2px solid #00ff99;
     border-radius: 5px;
-    width: calc(50% - 20px);
+    width: calc(45% - 20px); /* کوچکتر کردن کادرها */
+    height: auto; /* ابعاد کوچکتر */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section h2 {
