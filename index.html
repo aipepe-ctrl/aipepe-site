@@ -8,101 +8,113 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0d1117;
-      color: #00f7ae;
+      background-color: #0c0f18;
+      color: #00ffd1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
+      padding: 20px;
     }
-
     .container {
       max-width: 800px;
-      padding: 20px;
-    }
-
-    img.logo {
-      width: 300px;
-    }
-
-    h1 {
-      color: #00ffae;
-      font-size: 2.5em;
-      margin-top: 0.5em;
-    }
-
-    h2 {
-      font-weight: normal;
-      margin: 0.5em 0 1em;
-    }
-
-    .btn {
-      background-color: #00f7ae;
-      color: #000;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1em;
-      cursor: pointer;
-      margin-bottom: 2em;
-    }
-
-    .info-boxes {
+      width: 100%;
       display: flex;
-      justify-content: center;
-      gap: 20px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
-      margin-bottom: 2em;
+      gap: 20px;
     }
-
+    .left {
+      flex: 1;
+    }
+    .left img {
+      width: 100%;
+      max-width: 300px;
+    }
+    .right {
+      flex: 1;
+    }
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #00ffae;
+    }
+    .subtitle {
+      font-size: 18px;
+      margin: 10px 0 20px;
+      color: #00ffd1;
+    }
+    .button {
+      background-color: #00ffd1;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .info-section {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 40px;
+      gap: 20px;
+    }
     .box {
-      border: 2px solid #00f7ae;
+      flex: 1;
+      border: 1px solid #00ffd1;
       border-radius: 10px;
       padding: 20px;
-      width: 300px;
     }
-
+    .box h3 {
+      margin-top: 0;
+      color: #00ffd1;
+    }
     .socials {
       display: flex;
       justify-content: center;
       gap: 30px;
-      margin-bottom: 2em;
+      margin-top: 30px;
     }
-
     .socials img {
       width: 30px;
       height: 30px;
-      cursor: pointer;
+      filter: brightness(0) saturate(100%) invert(71%) sepia(71%) saturate(7493%) hue-rotate(113deg) brightness(105%) contrast(97%);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="your-pepe-image.png" alt="AIPEPE" class="logo" />
-    <h1>AIPEPE</h1>
-    <h2>THE SMARTEST MEME COIN HAS ARRIVED</h2>
-    <button class="btn">Join Swap</button>
-
-    <div class="info-boxes">
-      <div class="box">
-        <h3>Tokenomics</h3>
-        <p>Supply: 1,000,000,000</p>
-        <p>Tax: 0%</p>
-      </div>
-      <div class="box">
-        <h3>Roadmap</h3>
-        <p>Phase 1: Launch</p>
-        <p>Phase 2: Growth</p>
-        <p>Phase 3: Utility</p>
-      </div>
+    <div class="left">
+      <img src="https://i.imgur.com/2lF7p8u.png" alt="AIPEPE" />
     </div>
-
-    <div class="socials">
-      <img src="twitter-icon.png" alt="Twitter" />
-      <img src="telegram-icon.png" alt="Telegram" />
-      <img src="discord-icon.png" alt="Discord" />
+    <div class="right">
+      <div class="title">AIPEPE</div>
+      <div class="subtitle">THE SMARTEST MEME COIN HAS ARRIVED</div>
+      <button class="button">Join Swap</button>
     </div>
+  </div>
+
+  <div class="info-section">
+    <div class="box">
+      <h3>Tokenomics</h3>
+      <p>Supply: 1,000,000,000</p>
+      <p>Tax: 0%</p>
+    </div>
+    <div class="box">
+      <h3>Roadmap</h3>
+      <p>Phase 1: Launch</p>
+      <p>Phase 2: Growth</p>
+      <p>Phase 3: Utility</p>
+    </div>
+  </div>
+
+  <div class="socials">
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" /></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord" /></a>
   </div>
 </body>
 </html>
