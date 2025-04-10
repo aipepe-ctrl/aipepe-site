@@ -1,134 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AIPEPE</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #0a0f1c;
-        color: #00ffc3;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 20px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIPEPE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #00f7ae;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
-      .container {
-        max-width: 900px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
+    .container {
+      max-width: 800px;
+      padding: 20px;
+    }
 
-      .image-section {
-        flex: 1 1 300px;
-        padding: 10px;
-      }
+    img.logo {
+      width: 300px;
+    }
 
-      .text-section {
-        flex: 1 1 300px;
-        padding: 10px;
-      }
+    h1 {
+      color: #00ffae;
+      font-size: 2.5em;
+      margin-top: 0.5em;
+    }
 
-      h1 {
-        color: #00ffc3;
-        font-size: 36px;
-        margin: 0;
-      }
+    h2 {
+      font-weight: normal;
+      margin: 0.5em 0 1em;
+    }
 
-      h2 {
-        font-size: 20px;
-        font-weight: normal;
-        margin-top: 10px;
-        margin-bottom: 20px;
-      }
+    .btn {
+      background-color: #00f7ae;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-bottom: 2em;
+    }
 
-      .button {
-        background-color: #00ffc3;
-        color: #000;
-        padding: 12px 24px;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-bottom: 30px;
-      }
+    .info-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 2em;
+    }
 
-      .info-section {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    .box {
+      border: 2px solid #00f7ae;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+    }
 
-      .card {
-        border: 1px solid #00ffc3;
-        border-radius: 10px;
-        padding: 20px;
-        min-width: 250px;
-      }
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 2em;
+    }
 
-      .card h3 {
-        margin-top: 0;
-        margin-bottom: 10px;
-      }
+    .socials img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="your-pepe-image.png" alt="AIPEPE" class="logo" />
+    <h1>AIPEPE</h1>
+    <h2>THE SMARTEST MEME COIN HAS ARRIVED</h2>
+    <button class="btn">Join Swap</button>
 
-      .socials {
-        margin-top: 30px;
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-      }
-
-      .socials img {
-        width: 30px;
-        height: 30px;
-        filter: brightness(0) saturate(100%) invert(78%) sepia(96%) saturate(361%) hue-rotate(114deg) brightness(103%) contrast(101%);
-        cursor: pointer;
-      }
-
-      img.hero {
-        width: 100%;
-        max-width: 350px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="image-section">
-        <img src="your-pepe-image.png" alt="AIPEPE" class="hero" />
+    <div class="info-boxes">
+      <div class="box">
+        <h3>Tokenomics</h3>
+        <p>Supply: 1,000,000,000</p>
+        <p>Tax: 0%</p>
       </div>
-      <div class="text-section">
-        <h1>AIPEPE</h1>
-        <h2>THE SMARTEST MEME COIN HAS ARRIVED</h2>
-        <button class="button">Join Swap</button>
-
-        <div class="info-section">
-          <div class="card">
-            <h3>Tokenomics</h3>
-            <p>Supply: 1,000,000,000</p>
-            <p>Tax: 0%</p>
-          </div>
-          <div class="card">
-            <h3>Roadmap</h3>
-            <p>Phase 1: Launch</p>
-            <p>Phase 2: Growth</p>
-            <p>Phase 3: Utility</p>
-          </div>
-        </div>
-
-        <div class="socials">
-          <img src="twitter-icon.png" alt="Twitter" />
-          <img src="telegram-icon.png" alt="Telegram" />
-          <img src="discord-icon.png" alt="Discord" />
-        </div>
+      <div class="box">
+        <h3>Roadmap</h3>
+        <p>Phase 1: Launch</p>
+        <p>Phase 2: Growth</p>
+        <p>Phase 3: Utility</p>
       </div>
     </div>
-  </body>
+
+    <div class="socials">
+      <img src="twitter-icon.png" alt="Twitter" />
+      <img src="telegram-icon.png" alt="Telegram" />
+      <img src="discord-icon.png" alt="Discord" />
+    </div>
+  </div>
+</body>
 </html>
