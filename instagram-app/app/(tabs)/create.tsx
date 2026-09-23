@@ -1,0 +1,1 @@
+import React from"react";import{View,Text,StyleSheet}from"react-native";export default function Create(){return <View style={s.root}><Text style={s.title}>Create</Text><Text style={s.sub}>Photo and video creation</Text></View>}const s=StyleSheet.create({root:{flex:1,alignItems:"center",justifyContent:"center"},title:{fontSize:28,fontWeight:"700"},sub:{marginTop:8,color:"#777"}});
