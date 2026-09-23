@@ -1,5 +1,5 @@
 import React,{useState}from"react";import{useRouter}from"expo-router";
-import{View,Text,StyleSheet,ScrollView,Image,Pressable,Modal,Dimensions}from"react-native";
+import{View,Text,StyleSheet,ScrollView,Image,Pressable,Modal,Dimensions,RefreshControl}from"react-native";
 
 const {width}=Dimensions.get("window");
 const stories=[["Your story","https://i.pravatar.cc/150?img=12"],["sara","https://i.pravatar.cc/150?img=47"],["ali","https://i.pravatar.cc/150?img=33"],["mina","https://i.pravatar.cc/150?img=5"],["reza","https://i.pravatar.cc/150?img=11"]];
@@ -7,11 +7,11 @@ const posts=[["sara.design","https://i.pravatar.cc/150?img=47","https://picsum.p
 
 export default function Home(){const router=useRouter();
  const[liked,setLiked]=useState<number[]>([]);
- const[story,setStory]=useState<number|null>(null);
+ const[story,setStory]=useState<number|null>(null); const[refreshing,setRefreshing]=useState(false); const refresh=()=>{setRefreshing(true);setTimeout(()=>setRefreshing(false),700)};
  const toggleLike=(i:number)=>setLiked(v=>v.includes(i)?v.filter(x=>x!==i):[...v,i]);
  return <View style={s.safe}>
   <View style={s.header}><Text style={s.logo}>Instagram</Text><View style={s.head}><Text style={s.icon}>♡</Text><Text style={s.icon}>⌁</Text></View></View>
-  <ScrollView showsVerticalScrollIndicator={false}>
+  <ScrollView showsVerticalScrollIndicator={false} refreshControl={<RefreshControl refreshing={refreshing} onRefresh={refresh}/>}>
    <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={s.stories}>
     {stories.map((x,i)=><Pressable style={s.story} key={x[0]} onPress={()=>setStory(i)}>
       <View style={[s.ring,i===0&&s.mine]}><Image source={{uri:x[1]}} style={s.storyImg}/></View><Text style={s.storyText}>{x[0]}</Text>
