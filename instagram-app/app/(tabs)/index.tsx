@@ -1,11 +1,11 @@
-import React,{useState}from"react";
+import React,{useState}from"react";import{useRouter}from"expo-router";
 import{View,Text,StyleSheet,ScrollView,Image,Pressable,Modal,Dimensions}from"react-native";
 
 const {width}=Dimensions.get("window");
 const stories=[["Your story","https://i.pravatar.cc/150?img=12"],["sara","https://i.pravatar.cc/150?img=47"],["ali","https://i.pravatar.cc/150?img=33"],["mina","https://i.pravatar.cc/150?img=5"],["reza","https://i.pravatar.cc/150?img=11"]];
 const posts=[["sara.design","https://i.pravatar.cc/150?img=47","https://picsum.photos/id/1011/900/900","12,482","A quiet place to reset."],["ali.visuals","https://i.pravatar.cc/150?img=33","https://picsum.photos/id/1015/900/900","8,931","Golden hour."]];
 
-export default function Home(){
+export default function Home(){const router=useRouter();
  const[liked,setLiked]=useState<number[]>([]);
  const[story,setStory]=useState<number|null>(null);
  const toggleLike=(i:number)=>setLiked(v=>v.includes(i)?v.filter(x=>x!==i):[...v,i]);
