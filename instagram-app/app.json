@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "Instagram 2026",
+    "slug": "instagram-2026",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "instagram2026",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "plugins": ["expo-router"],
+    "android": {
+      "package": "com.aipepe.instagram2026"
+    }
+  }
+}
